@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACC_KEY',
+  key: process.env.BROWSERSTACK_AUTOMATE_KEY || 'BROWSERSTACK_AUTOMATE_KEY',
 
   updateJob: false,
   specs: [
-    './tests/specs/single_test.js'
+    './tests/specs/*.js'
   ],
   exclude: [],
 
@@ -22,6 +24,8 @@ exports.config = {
     browser: 'internet explorer'
   },{
     browser: 'safari'
+  },{
+    browser: 'edge'
   }],
 
   logLevel: 'warn',

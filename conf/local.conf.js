@@ -1,12 +1,14 @@
-var browserstack = require('browserstack-local');
+require('dotenv').config();
+
+const browserstack = require('browserstack-local');
 
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACC_KEY',
+  key: process.env.BROWSERSTACK_AUTOMATE_KEY || 'BROWSERSTACK_AUTOMATE_KEY',
 
   updateJob: false,
   specs: [
-    './tests/specs/local_test.js'
+    './tests/specs/login_test.js'
   ],
   exclude: [],
 
