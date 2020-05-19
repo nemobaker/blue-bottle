@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path:__dirname+'/./../../.env'})
 
 describe('Blue Bottle Log-in Page', function () {
   it('should load the correct page', function() {
